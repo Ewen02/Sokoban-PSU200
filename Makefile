@@ -6,8 +6,8 @@
 ##
 
 SRC =	src/main.c	\
-		src/file_pathe.c	\
-		src/filling_tab.c
+		src/map/file_pathe.c	\
+		src/map/filling_tab.c
 
 OBJ	=	$(SRC:.c=.o)
 
