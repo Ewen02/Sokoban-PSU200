@@ -25,4 +25,4 @@
 
 int main(int ac, char **av);
 int file_pathe(char const *str);
-char **filling_tab(char *buffer);
+char **filling_tab(char *buffer, char letter);

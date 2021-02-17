@@ -16,7 +16,8 @@ SRC =	my_str.c	\
 		my_strncpy.c	\
 		my_strncmp.c	\
 		my_strcpy.c	 \
-		my_strdup.c
+		my_strdup.c	\
+		my_str_to_tab.c
 
 OBJ = 	$(SRC:.c=.o)
 NAME = 	libmy.a

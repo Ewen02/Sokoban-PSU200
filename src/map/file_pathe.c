@@ -5,10 +5,10 @@
 ** //
 */
 
-#include "../include/my_str.h"
-#include "../include/my_utils.h"
-#include "../include/my_src.h"
-#include "../include/my_printf.h"
+#include "../../include/my_str.h"
+#include "../../include/my_utils.h"
+#include "../../include/my_src.h"
+#include "../../include/my_printf.h"
 #include <ncurses.h>
 
 int file_pathe(char const *str)
@@ -27,5 +27,5 @@ int file_pathe(char const *str)
         return 84;
     buffer[ft.st_size] = '\0';
     close(fd);
-    filling_tab(buffer);
+    filling_tab(buffer, '\n');
 }
