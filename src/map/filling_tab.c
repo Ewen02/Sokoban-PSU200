@@ -11,9 +11,10 @@
 #include "../../include/my_printf.h"
 #include <ncurses.h>
 
-char **filling_tab(char *buffer, char letter)
+void filling_tab(char *buffer, char letter)
 {
-    char **tab = NULL;
+    player_t player;
+    player.tab = NULL;
     int count_tab = 1;
     int size = 0, count = 0;
 
@@ -21,17 +22,16 @@ char **filling_tab(char *buffer, char letter)
     for (int i = 0; buffer[i] != '\0'; i++)
         if (buffer[i] == letter)
             count_tab++;
-    tab = malloc(sizeof(char *) * (size + 1));
+    player.tab = malloc(sizeof(char *) * (size + 1));
     for (int i = 0, j = 0; i < count_tab; i++) {
             if (buffer[count] == letter)
                 j = 0, buffer += 1;
-        tab[i] = malloc(sizeof(char) * (size + 1));
+        player.tab[i] = malloc(sizeof(char) * (size + 1));
         for (j = 0; buffer[count] != letter && buffer[count] != '\0'; j++) {
-            tab[i][j] = buffer[count];
-            tab[i][j + 1] = '\0';
+            player.tab[i][j] = buffer[count];
+            player.tab[i][j + 1] = '\0';
             count++;
         }
     }
-    my_printf("%t", tab);
-    return tab;
+    map_ncurse(&player);
 }

@@ -21,8 +21,18 @@
 #include <dirent.h>
 #include <ncurses.h>
 
+typedef struct player_s
+{
+    char **tab;
+    char **map;
+    int posY;
+    int posX;
+}player_t;
+
+
 #pragma once
 
 int main(int ac, char **av);
 int file_pathe(char const *str);
-char **filling_tab(char *buffer, char letter);
+void filling_tab(char *buffer, char letter);
+void map_ncurse(player_t *player);

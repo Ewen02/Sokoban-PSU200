@@ -7,7 +7,8 @@
 
 SRC =	src/main.c	\
 		src/map/file_pathe.c	\
-		src/map/filling_tab.c
+		src/map/filling_tab.c	\
+		src/map_ncurse.c
 
 OBJ	=	$(SRC:.c=.o)
 
