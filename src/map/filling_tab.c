@@ -15,8 +15,7 @@ void filling_tab(char *buffer, char letter)
 {
     player_t player;
     player.tab = NULL;
-    int count_tab = 1;
-    int size = 0, count = 0;
+    int count_tab = 1, size = 0, count = 0;
 
     for (int i = 0; buffer[i] != '\0'; i++, size++);
     for (int i = 0; buffer[i] != '\0'; i++)
