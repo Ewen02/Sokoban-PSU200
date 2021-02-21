@@ -24,10 +24,8 @@
 typedef struct player_s
 {
     char **tab;
-    int posY;
-    int posX;
+    char **map;
 }player_t;
-
 
 #pragma once
 
