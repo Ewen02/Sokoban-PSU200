@@ -17,8 +17,13 @@ void move_left(player_t *player)
         for (unsigned int j = 0; player->tab[i][j] != '\0'; j++) {
             if (player->tab[i][j] == 'P' && player->tab[i][j - 1] != '#'
                     && player->tab[i][j - 1] != 'O') {
-                if (player->tab[i][j - 1] == 'X'
-                    && player->tab[i][j - 2] != ' ')
+                if (player->tab[i][j - 1] == 'X' && player->tab[i][j - 2] == 'O') {
+                    player->tab[i][j] = ' ';
+                    player->tab[i][j - 1] = 'P';
+                    player->tab[i][j - 2] = 'X';
+                }
+                else if (player->tab[i][j - 1] == 'X'
+                    && player->tab[i][j - 2] != ' ' && player->tab[i][j - 2] != 'O')
                     return;
                 else if (player->tab[i][j - 1] == 'X') {
                     player->tab[i][j] = ' ';
@@ -41,7 +46,12 @@ void move_right(player_t *player)
         for (unsigned int j = 0; player->tab[i][j] != '\0'; j++) {
             if (player->tab[i][j] == 'P' && player->tab[i][j + 1] != '#'
                 && player->tab[i][j + 1] != 'O') {
-                if (player->tab[i][j + 1] == 'X'
+                if (player->tab[i][j + 1] == 'X' && player->tab[i][j + 2] == 'O') {
+                    player->tab[i][j] = ' ';
+                    player->tab[i][j + 1] = 'P';
+                    player->tab[i][j + 2] = 'X';
+                }
+                else if (player->tab[i][j + 1] == 'X'
                     && player->tab[i][j + 2] != ' ')
                     return;
                 else if (player->tab[i][j + 1] == 'X') {
