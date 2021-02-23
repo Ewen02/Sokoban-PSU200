@@ -11,7 +11,7 @@
 #include "../include/my_printf.h"
 #include <ncurses.h>
 
-void map_ncurse(player_t *player)
+int map_ncurse(player_t *player)
 {
     initscr();
     int ch = 0;
@@ -26,15 +26,23 @@ void map_ncurse(player_t *player)
         switch (ch) {
             case KEY_UP:
                 move_up(player);
+                // if (check_map(player) == 0);
+                //     return 0;
                 break;
             case KEY_DOWN:
                 move_down(player);
+                // if (check_map(player) == 0);
+                //     return 0;
                 break;
             case KEY_LEFT:
                 move_left(player);
+                // if (check_map(player) == 0);
+                //     return 0;
                 break;
             case KEY_RIGHT:
                 move_right(player);
+                // if (check_map(player) == 0);
+                //     return 0;
                 break;
             default:
                 break;
