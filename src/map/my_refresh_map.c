@@ -15,5 +15,6 @@ void refresh_map(player_t *player)
 {
     for (int i = 0; player->tab[i] != NULL; i++) {
         mvprintw(i, 0, player->tab[i]);
-    }   
+    }
+    refresh();
 }

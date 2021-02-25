@@ -19,7 +19,6 @@ int map_ncurse(player_t *player)
     keypad(stdscr, TRUE);
     while (1) {
         refresh_map(player);
-        refresh();
         ch = getch();
         switch (ch) {
             case KEY_UP:
@@ -28,8 +27,6 @@ int map_ncurse(player_t *player)
                     refresh_map(player);
                     return 0;
                 }
-                // if (check_loose(player) == 0)
-                //     return 0;
                 break;
             case KEY_DOWN:
                 move_down(player);
@@ -37,8 +34,6 @@ int map_ncurse(player_t *player)
                     refresh_map(player);
                     return 0;
                 }
-                // if (check_loose(player) == 0)
-                //     return 0;
                 break;
             case KEY_LEFT:
                 move_left(player);
@@ -46,8 +41,6 @@ int map_ncurse(player_t *player)
                     refresh_map(player);
                     return 0;
                 }
-                // if (check_loose(player) == 0)
-                //     return 0;
                 break;
             case KEY_RIGHT:
                 move_right(player);
@@ -55,8 +48,6 @@ int map_ncurse(player_t *player)
                     refresh_map(player);
                     return 0;
                 }
-                // if (check_loose(player) == 0)
-                //     return 0;
                 break;
             default:
                 break;
