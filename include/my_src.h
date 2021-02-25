@@ -38,4 +38,6 @@ void move_down(player_t *player);
 void move_up(player_t *player);
 void move_right(player_t *player);
 void move_left(player_t *player);
-int check_map(player_t *player);
+int check_win(player_t *player);
+int check_loose(player_t *player);
+void refresh_map(player_t *player);

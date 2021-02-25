@@ -9,10 +9,12 @@ SRC =	src/main.c	\
 		src/map/file_pathe.c	\
 		src/map/filling_tab.c	\
 		src/map/filling_map.c	\
+		src/map/my_refresh_map.c	\
 		src/map_ncurse.c	\
 		src/move/my_up_and_down.c	\
 		src/move/my_left_and_right.c	\
-		src/check_map.c
+		src/checking/check_win.c	\
+		src/checking/check_loose.c
 
 OBJ	=	$(SRC:.c=.o)
 

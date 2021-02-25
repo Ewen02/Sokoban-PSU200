@@ -18,30 +18,44 @@ int map_ncurse(player_t *player)
     curs_set(0);
     keypad(stdscr, TRUE);
     while (1) {
-        for (int i = 0; player->tab[i] != NULL; i++) {
-            mvprintw(i, 0, player->tab[i]);
-        }
+        refresh_map(player);
         refresh();
         ch = getch();
         switch (ch) {
             case KEY_UP:
                 move_up(player);
-                // if (check_map(player) == 0);
+                if (check_win(player) == 0) {
+                    refresh_map(player);
+                    return 0;
+                }
+                // if (check_loose(player) == 0)
                 //     return 0;
                 break;
             case KEY_DOWN:
                 move_down(player);
-                // if (check_map(player) == 0);
+                if (check_win(player) == 0) {
+                    refresh_map(player);
+                    return 0;
+                }
+                // if (check_loose(player) == 0)
                 //     return 0;
                 break;
             case KEY_LEFT:
                 move_left(player);
-                // if (check_map(player) == 0);
+                if (check_win(player) == 0) {
+                    refresh_map(player);
+                    return 0;
+                }
+                // if (check_loose(player) == 0)
                 //     return 0;
                 break;
             case KEY_RIGHT:
                 move_right(player);
-                // if (check_map(player) == 0);
+                if (check_win(player) == 0) {
+                    refresh_map(player);
+                    return 0;
+                }
+                // if (check_loose(player) == 0)
                 //     return 0;
                 break;
             default:

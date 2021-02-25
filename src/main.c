@@ -10,7 +10,7 @@
 #include "../include/my_printf.h"
 #include "../include/my_src.h"
 
-int check_input(int ac, char **av)
+static int check_input(int ac, char **av)
 {
     int fd;
     char buffer[1934];
