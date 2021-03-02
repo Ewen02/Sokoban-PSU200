@@ -11,7 +11,7 @@
 #include "../../include/my_printf.h"
 #include <ncurses.h>
 
-void filling_tab(char *buffer, char letter)
+int filling_tab(char *buffer, char letter)
 {
     player_t player;
     player.tab = NULL;

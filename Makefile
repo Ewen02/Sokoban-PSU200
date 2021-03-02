@@ -14,7 +14,7 @@ SRC =	src/main.c	\
 		src/move/my_up_and_down.c	\
 		src/move/my_left_and_right.c	\
 		src/checking/check_win.c	\
-		src/checking/check_loose.c
+		src/checking/check_loose.c	\
 
 OBJ	=	$(SRC:.c=.o)
 
