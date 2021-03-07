@@ -11,10 +11,13 @@ SRC =	src/main.c	\
 		src/map/filling_map.c	\
 		src/map/my_refresh_map.c	\
 		src/map_ncurse.c	\
-		src/move/my_up_and_down.c	\
-		src/move/my_left_and_right.c	\
+		src/move/my_down.c	\
+		src/move/my_right.c	\
+		src/move/my_left.c	\
+		src/move/my_up.c	\
 		src/checking/check_win.c	\
 		src/checking/check_loose.c	\
+		src/switch.c
 
 OBJ	=	$(SRC:.c=.o)
 
