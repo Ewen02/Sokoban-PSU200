@@ -14,6 +14,7 @@
 void my_switc(player_t *player, int ch)
 {
     switch (ch) {
+
         case KEY_UP:
             parcing_map_u(player);
             break;
