@@ -28,7 +28,6 @@ $(NAME):	$(OBJ)
 	ar rc $(NAME) $(OBJ)
 	rm -f $(OBJ)
 
-
 clean:
 	rm -f $(OBJ)
 	rm -f ../$(NAME)

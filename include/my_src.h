@@ -21,6 +21,9 @@
 #include <dirent.h>
 #include <ncurses.h>
 
+#undef  EXIT_FAILURE
+#define EXIT_FAILURE 84
+
 typedef struct player_s
 {
     char **tab;

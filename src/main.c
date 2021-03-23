@@ -32,8 +32,8 @@ static int check_input(int ac, char **av)
 int main(int ac, char **av)
 {
     if (check_input(ac, av) == 0)
-        return 0;
+        return EXIT_SUCCESS;
     if (file_pathe(av[1]) == 84)
-        return 84;
-    return 0;
+        return EXIT_FAILURE;
+    return EXIT_SUCCESS;
 }
