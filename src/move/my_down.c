@@ -11,7 +11,7 @@
 #include "../../include/my_printf.h"
 #include <ncurses.h>
 
-static int move_down(player_t *player, unsigned int i, unsigned int j)
+static int move_down(player_t *player, uint i, uint j)
 {
     if (player->tab[i][j] == 'P' && player->tab[i + 1][j] != '#'
     && player->tab[i + 1][j] != 'O') {
@@ -40,8 +40,8 @@ void parcing_map_d(player_t *player)
 {
     bool stop = 0;
 
-    for (unsigned int i = 0; player->tab[i] != NULL && !stop; i++) {
-        for (unsigned int j = 0; player->tab[i][j] != '\0' && !stop; j++) {
+    for (uint i = 0; player->tab[i] != NULL && !stop; i++) {
+        for (uint j = 0; player->tab[i][j] != '\0' && !stop; j++) {
             stop = move_down(player, i, j);
         }
     }
