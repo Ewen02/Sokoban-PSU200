@@ -5,11 +5,7 @@
 ** //
 */
 
-#include "../../include/my_str.h"
-#include "../../include/my_utils.h"
-#include "../../include/my_src.h"
-#include "../../include/my_printf.h"
-#include <ncurses.h>
+#include "my_src.h"
 
 int check_loose(player_t *player)
 {

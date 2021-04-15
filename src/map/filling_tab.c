@@ -5,16 +5,11 @@
 ** //
 */
 
-#include "../../include/my_str.h"
-#include "../../include/my_utils.h"
-#include "../../include/my_src.h"
-#include "../../include/my_printf.h"
-#include <ncurses.h>
+#include "my_src.h"
 
 int filling_tab(char *buffer, char letter)
 {
-    player_t player;
-    player.tab = NULL;
+    player_t player = {0};
     int count_tab = 1, size = 0, count = 0;
 
     for (int i = 0; buffer[i] != '\0'; i++, size++);

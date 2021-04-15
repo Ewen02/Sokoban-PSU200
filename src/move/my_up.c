@@ -5,11 +5,7 @@
 ** //
 */
 
-#include "../../include/my_str.h"
-#include "../../include/my_utils.h"
-#include "../../include/my_src.h"
-#include "../../include/my_printf.h"
-#include <ncurses.h>
+#include "my_src.h"
 
 static int move_up(player_t *player, uint i, uint j)
 {
@@ -31,9 +27,9 @@ static int move_up(player_t *player, uint i, uint j)
             player->tab[i][j] = ' ';
             player->tab[i - 1][j] = 'P';
         }
-        return 1;
+        return EXIT_ERROR;
     }
-    return 0;
+    return EXIT_SUCCESS;
 }
 
 void parcing_map_u(player_t *player)

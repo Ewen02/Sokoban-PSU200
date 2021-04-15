@@ -5,10 +5,9 @@
 ** //
 */
 
-#include "../include/my_utils.h"
-#include "../include/my_str.h"
-#include "../include/my_printf.h"
-#include "../include/my_src.h"
+#include "my_src.h"
+static const char *my_print_h = "make ./my_sokoban -h\n";
+
 
 static int check_input(int ac, char **av)
 {
@@ -20,13 +19,13 @@ static int check_input(int ac, char **av)
         while (read(fd, buffer, 1) != 0) {
             write(1, buffer, 1);
         }
-        return 0;
+        return EXIT_SUCCESS;
     }
     if (ac > 2) {
-        my_printf("make ./my_sokoban -h\n");
-        return 84;
+        my_printf(my_print_h);
+        return EXIT_FAILURE;
     }
-    return 1;
+    return EXIT_ERROR;
 }
 
 int main(int ac, char **av)

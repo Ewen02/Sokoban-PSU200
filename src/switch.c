@@ -5,11 +5,7 @@
 ** //
 */
 
-#include "../include/my_str.h"
-#include "../include/my_utils.h"
-#include "../include/my_src.h"
-#include "../include/my_printf.h"
-#include <ncurses.h>
+#include "my_src.h"
 
 void my_switc(player_t *player, int ch)
 {
@@ -26,8 +22,5 @@ void my_switc(player_t *player, int ch)
             break;
         case KEY_RIGHT:
             parcing_map_r(player);
-            break;
-        default:
-            break;
         }
 }

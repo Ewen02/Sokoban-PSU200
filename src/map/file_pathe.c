@@ -14,17 +14,18 @@
 int file_pathe(char const *str)
 {
     int fd = open(str, O_RDONLY);
-    if (fd <= -1)
-        return 84;
     char *buffer;
     struct stat ft;
+
+    if (fd <= -1)
+        return EXIT_FAILURE;
     if (stat(str, &ft) == -1) {
         close(fd);
-        return 84;
+        return EXIT_FAILURE;
     }
     buffer = malloc(sizeof(char) * (ft.st_size + 1));
     if (read(fd, buffer, ft.st_size) == -1)
-        return 84;
+        return EXIT_FAILURE;
     buffer[ft.st_size] = '\0';
     close(fd);
     filling_tab(buffer, '\n');

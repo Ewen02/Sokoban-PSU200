@@ -5,11 +5,7 @@
 ** //
 */
 
-#include "../include/my_str.h"
-#include "../include/my_utils.h"
-#include "../include/my_src.h"
-#include "../include/my_printf.h"
-#include <ncurses.h>
+#include "my_src.h"
 
 int map_ncurse(player_t *player)
 {
@@ -24,7 +20,7 @@ int map_ncurse(player_t *player)
         my_switc(player, ch);
         if (check_win(player) == 0) {
             refresh_map(player);
-            return 0;
+            return EXIT_SUCCESS;
         }
     }
     endwin();
