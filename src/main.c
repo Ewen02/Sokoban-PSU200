@@ -6,8 +6,6 @@
 */
 
 #include "my_src.h"
-static const char *my_print_h = "make ./my_sokoban -h\n";
-
 
 static int check_input(int ac, char **av)
 {
@@ -16,14 +14,13 @@ static int check_input(int ac, char **av)
 
     if (ac == 2 && av[1][0] == '-' && av[1][1] == 'h') {
         fd = open("assets/header.txt", O_RDONLY);
-        while (read(fd, buffer, 1) != 0) {
+        while (read(fd, buffer, 1) != 0)
             write(1, buffer, 1);
-        }
         return EXIT_SUCCESS;
     }
-    if (ac > 2) {
-        my_printf(my_print_h);
-        return EXIT_FAILURE;
+    if (ac > 2 || ac == 1) {
+        my_printf("make ./my_sokoban -h\n");
+        return EXIT_ERROR;
     }
     return EXIT_ERROR;
 }
