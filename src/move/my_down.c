@@ -9,16 +9,13 @@
 
 static int move_down(player_t *player, uint i, uint j)
 {
-    if (player->tab[i][j] == 'P' && player->tab[i + 1][j] != '#'
-    && player->tab[i + 1][j] != 'O') {
-        if (player->tab[i + 1][j] == 'X'
-        && player->tab[i + 2][j] == 'O') {
+    if (player->tab[i][j] == 'P' && player->tab[i + 1][j] != '#') {
+        if (player->tab[i + 1][j] == 'X' && player->tab[i + 2][j] == 'O') {
             player->tab[i][j] = ' ';
             player->tab[i + 1][j] = 'P';
             player->tab[i + 2][j] = 'X'; }
-        if (player->tab[i + 1][j] == 'X'
-        && player->tab[i + 2][j] != ' ')
-            return 1;
+        if (player->tab[i + 1][j] == 'X' && player->tab[i + 2][j] != ' ')
+            return EXIT_ERROR;
         if (player->tab[i + 1][j] == 'X') {
             player->tab[i][j] = ' ';
             player->tab[i + 1][j] = 'P';

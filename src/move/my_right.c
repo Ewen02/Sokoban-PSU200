@@ -9,16 +9,13 @@
 
 static int move_right(player_t *player, uint i, uint j)
 {
-    if (player->tab[i][j] == 'P' && player->tab[i][j + 1] != '#'
-    && player->tab[i][j + 1] != 'O') {
-        if (player->tab[i][j + 1] == 'X'
-        && player->tab[i][j + 2] == 'O') {
+    if (player->tab[i][j] == 'P' && player->tab[i][j + 1] != '#') {
+        if (player->tab[i][j + 1] == 'X' && player->tab[i][j + 2] == 'O') {
             player->tab[i][j] = ' ';
             player->tab[i][j + 1] = 'P';
             player->tab[i][j + 2] = 'X'; }
-        if (player->tab[i][j + 1] == 'X'
-        && player->tab[i][j + 2] != ' ')
-            return 1;
+        if (player->tab[i][j + 1] == 'X' && player->tab[i][j + 2] != ' ')
+            return EXIT_ERROR;
         if (player->tab[i][j + 1] == 'X') {
             player->tab[i][j] = ' ';
             player->tab[i][j + 1] = 'P';

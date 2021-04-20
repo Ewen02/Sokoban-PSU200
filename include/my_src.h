@@ -46,8 +46,8 @@ typedef struct player_s
 
 int main(int ac, char **av);
 int file_pathe(char const *str);
-int filling_tab(char *buffer, char letter);
-void filling_map(char *buffer, char letter);
+int filling_tab(player_t *player, char *buffer, char letter);
+player_t *filling_map(char *buffer, char letter);
 int map_ncurse(player_t *player);
 int check_win(player_t *player);
 int check_loose(player_t *player);

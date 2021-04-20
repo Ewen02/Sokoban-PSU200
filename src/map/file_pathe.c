@@ -13,6 +13,7 @@
 
 int file_pathe(char const *str)
 {
+    player_t *player;
     int fd = open(str, O_RDONLY);
     char *buffer;
     struct stat ft;
@@ -28,5 +29,6 @@ int file_pathe(char const *str)
         return EXIT_FAILURE;
     buffer[ft.st_size] = '\0';
     close(fd);
-    filling_tab(buffer, '\n');
+    player = filling_map(buffer, '\n');
+    filling_tab(player, buffer, '\n');
 }
