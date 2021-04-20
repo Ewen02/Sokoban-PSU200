@@ -9,5 +9,5 @@
 
 int check_loose(player_t *player)
 {
-    return 0;
+    return EXIT_SUCCESS;
 }
