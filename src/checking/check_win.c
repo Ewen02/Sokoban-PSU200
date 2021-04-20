@@ -22,7 +22,8 @@ int check_win(player_t *player)
 
     for (uint i = 0; player->tab[i] != NULL; i++)
         for (uint j = 0; player->tab[i][j] != '\0'; j++)
-            counter = count(player, i, j);
+            if (player->tab[i][j] == 'O')
+                counter++;
     if (counter == 0)
         return EXIT_SUCCESS;
     return EXIT_ERROR;
