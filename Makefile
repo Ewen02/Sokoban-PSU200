@@ -15,10 +15,10 @@ SRC =	src/main.c	\
 		src/move/my_right.c	\
 		src/move/my_left.c	\
 		src/move/my_up.c	\
+		src/move/checking_second_map.c	\
 		src/checking/check_win.c	\
 		src/checking/check_loose.c	\
-		src/switch.c	\
-		src/move/checking_second_map.c
+		src/switch.c
 
 OBJ	=	$(SRC:.c=.o)
 
