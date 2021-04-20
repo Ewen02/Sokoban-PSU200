@@ -26,7 +26,6 @@
 #include "my_str.h"
 #include "my_utils.h"
 
-
 #undef  EXIT_FAILURE
 #define EXIT_FAILURE 84
 
@@ -34,7 +33,6 @@
 #undef EXIT_ERROR
 #endif
 #define EXIT_ERROR 1
-
 
 typedef struct player_s
 {
@@ -57,3 +55,4 @@ void parcing_map_r(player_t *player);
 void parcing_map_u(player_t *player);
 void parcing_map_d(player_t *player);
 void my_switc(player_t *player, int ch);
+void check_2_map(player_t *player);

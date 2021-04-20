@@ -7,21 +7,10 @@
 
 #include "my_src.h"
 
-static int check_2_map(player_t *player, uint i, uint j)
-{
-    if (player->tab[i][j] == 'P' && player->map[i][j] == 'O') {
-        printw("TOTOO");
-        refresh();
-        exit(1);
-    }
-    return EXIT_SUCCESS;
-}
-
 static int move_left(player_t *player, uint i, uint j)
 {
     if (player->tab[i][j] == 'P' && player->tab[i][j - 1] != '#') {
         if (player->tab[i][j - 1] == 'X' && player->tab[i][j - 2] == 'O') {
-            check_2_map(player, i, j);
             player->tab[i][j] = ' ';
             player->tab[i][j - 1] = 'P';
             player->tab[i][j - 2] = 'X'; }
