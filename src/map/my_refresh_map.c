@@ -13,6 +13,7 @@
 
 void refresh_map(player_t *player)
 {
+    check_2_map(player);
     for (int i = 0; player->tab[i]; i++)
         mvprintw(i, 0, player->tab[i]);
     refresh();
