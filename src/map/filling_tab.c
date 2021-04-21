@@ -29,4 +29,5 @@ int filling_tab(player_t *player, char *buffer, char letter)
     }
     player->tab[count_tab] = NULL;
     map_ncurse(player);
+    return EXIT_SUCCESS;
 }

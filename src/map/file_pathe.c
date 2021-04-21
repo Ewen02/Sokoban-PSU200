@@ -31,4 +31,5 @@ int file_pathe(char const *str)
     close(fd);
     player = filling_map(buffer, '\n');
     filling_tab(player, buffer, '\n');
+    return EXIT_SUCCESS;
 }

@@ -7,7 +7,7 @@
 
 #include "my_src.h"
 
-int check_loose(player_t *player)
+int check_loose(__attribute__((unused))player_t *player)
 {
     return EXIT_SUCCESS;
 }
